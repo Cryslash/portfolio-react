@@ -1,0 +1,13 @@
+.title {
+  display: flex;
+  font-size: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}

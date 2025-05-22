@@ -1,6 +1,7 @@
-import { Github, Instagram, Linkedin, Twitter, X } from 'lucide-react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import { MainTemplate } from '../../templates/MainTemplate';
 import styles from './styles.module.css';
+import { TypingText } from '../../components/TypingText';
 
 export function Home() {
   const XIcon = () => (
@@ -20,18 +21,25 @@ export function Home() {
     </svg>
   );
 
+  const jobs = [
+    'Desenvolvedor Web',
+    'Programador FullStack',
+    'Desenvolvedor Desktop',
+    'Criador de coisas legais',
+  ];
+
   return (
     <MainTemplate>
       <section className={styles.home}>
-        <div className={styles.homeImg}>
+        {/* <div className={styles.homeImg}>
           <img src='/images/crys.png' alt='' />
-        </div>
+        </div> */}
         <div className={styles.homeContent}>
           <h1>
             Olá, Eu sou o <span>Crys</span>
           </h1>
           <h3 className={styles.typingText}>
-            Eu sou um <span></span>
+            Eu sou um <TypingText words={jobs} />
           </h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
@@ -54,7 +62,7 @@ export function Home() {
             </a>
           </div>
           <a href='#' className={styles.btn}>
-            Contrate-me
+            Contate-me
           </a>
         </div>
       </section>
