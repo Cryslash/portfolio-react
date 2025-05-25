@@ -8,7 +8,7 @@ type MainTemplateProps = {
 export function MainTemplate({ children }: MainTemplateProps) {
   return (
     <>
-      <Menu />
+      {/* <Menu /> */}
       {children}
       {/* <Footer /> */}
     </>

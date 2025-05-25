@@ -1,3 +1,4 @@
+import { ScrollProvider } from './contexts/ScrollContext';
 import { MainRouter } from './routers/MainRouter';
 import './styles/global.css';
 import './styles/theme.css';
@@ -5,7 +6,9 @@ import './styles/theme.css';
 function App() {
   return (
     <>
-      <MainRouter />
+      <ScrollProvider>
+        <MainRouter />
+      </ScrollProvider>
     </>
   );
 }
