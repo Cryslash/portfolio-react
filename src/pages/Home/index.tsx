@@ -9,7 +9,6 @@ export function Home() {
       className='w-5 h-5'
       viewBox='0 0 36 24'
       fill='currentColor'
-      // fill='none'
       stroke='currentColor'
       strokeWidth='1.3'
       aria-hidden='true'
@@ -31,9 +30,9 @@ export function Home() {
   return (
     <MainTemplate>
       <section className={styles.home}>
-        {/* <div className={styles.homeImg}>
-          <img src='/images/crys.png' alt='' />
-        </div> */}
+        <div className={styles.homeImg}>
+          {/* <img src='/images/main.jpg' alt='' /> */}
+        </div>
         <div className={styles.homeContent}>
           <h1>
             Olá, Eu sou o <span>Crys</span>

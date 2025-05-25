@@ -1,12 +1,18 @@
-.container-fluid {
+/* .container-fluid {
   max-width: auto;
 }
 
 .container {
   max-width: 98rem;
   margin: 0 auto;
-}
+  border: solid white 2px;
+} */
 
 .content {
   margin: 3.2rem;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
 }

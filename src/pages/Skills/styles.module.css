@@ -1,5 +1,23 @@
 .skills {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 81vh;
+  margin: 0;
+}
+.rowtec {
+  max-width: 1024px;
+}
+.langTitle {
+  font-size: 3.2rem;
+  padding-top: 10rem;
+  font-weight: 300;
 }
