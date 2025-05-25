@@ -80,6 +80,10 @@ span {
   cursor: pointer;
 }
 
+.space {
+  margin-left: 2rem;
+}
+
 .btn:hover {
   transform: scale3d(1.03);
   background-color: #b74b4b;

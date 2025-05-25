@@ -1,49 +1,63 @@
-// import { useState } from 'react';
 import styles from './styles.module.css';
-import { Link, useLocation } from 'react-router';
-
-// type MenuItem = 'inicio' | 'skills' | 'trabalhos' | 'contato';
+import { useLocation, useNavigate } from 'react-router';
+import { useScrollDirection } from '../../contexts/ScrollContext';
 
 export function Menu() {
-  // const [active, setActive] = useState<MenuItem>('inicio');
   const location = useLocation();
+  const navigate = useNavigate();
+  const { setDirection, setManualTrigger } = useScrollDirection();
 
-  // const handleClick = (item: MenuItem) => {
-  //   setActive(item);
-  // };
+  const orderedRoutes = ['/', '/skills', '/trabalhos', '/contato'];
+
+  const handleClick = (path: string) => {
+    const currentIndex = orderedRoutes.indexOf(location.pathname);
+    const targetIndex = orderedRoutes.indexOf(path);
+
+    if (currentIndex === -1 || targetIndex === -1) return;
+
+    const direction = targetIndex > currentIndex ? 1 : -1;
+
+    setDirection(direction);
+    setManualTrigger(true);
+    navigate(path);
+  };
 
   return (
     <header>
       <a className={styles.logo}>CryTech</a>
       <nav className={styles.menu}>
-        <Link
-          to='/'
-          className={location.pathname === '/' ? styles.active : ''}
-          // onClick={() => handleClick('inicio')}
+        <a
+          onClick={() => handleClick(orderedRoutes[0])}
+          className={
+            location.pathname === orderedRoutes[0] ? styles.active : ''
+          }
         >
-          Inicio
-        </Link>
-        <Link
-          to='/skills'
-          className={location.pathname === '/skills' ? styles.active : ''}
-          // onClick={() => handleClick('skills')}
+          Início
+        </a>
+        <a
+          onClick={() => handleClick(orderedRoutes[1])}
+          className={
+            location.pathname === orderedRoutes[1] ? styles.active : ''
+          }
         >
           Skills
-        </Link>
-        <Link
-          to='/trabalhos'
-          className={location.pathname === '/trabalhos' ? styles.active : ''}
-          // onClick={() => handleClick('trabalhos')}
+        </a>
+        <a
+          onClick={() => handleClick(orderedRoutes[2])}
+          className={
+            location.pathname === orderedRoutes[2] ? styles.active : ''
+          }
         >
           Trabalhos
-        </Link>
-        <Link
-          to='/contato'
-          className={location.pathname === '/contato' ? styles.active : ''}
-          // onClick={() => handleClick('contato')}
+        </a>
+        <a
+          onClick={() => handleClick(orderedRoutes[3])}
+          className={
+            location.pathname === orderedRoutes[3] ? styles.active : ''
+          }
         >
           Contato
-        </Link>
+        </a>
       </nav>
     </header>
   );

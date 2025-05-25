@@ -1,44 +1,40 @@
 import { motion } from 'framer-motion';
+import { useScrollDirection } from '../../contexts/ScrollContext';
 
 type PageWrapperProps = {
   children: React.ReactNode;
-  direction: number;
 };
 
-const variants = {
-  initial: (direction: number) => ({
-    y: direction > 0 ? '100%' : '-100%',
-    opacity: 0,
-  }),
-  animate: {
-    y: '0%',
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: 'easeOut',
-    },
-  },
-  exit: (direction: number) => ({
-    y: direction > 0 ? '-100%' : '100%',
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: 'easeIn',
-    },
-  }),
-};
+export function PageWrapper({ children }: PageWrapperProps) {
+  const { direction, setManualTrigger } = useScrollDirection();
 
-export const PageWrapper = ({ children, direction }: PageWrapperProps) => {
+  const variants = {
+    initial: (dir: number) => ({
+      y: dir === 1 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+    animate: {
+      y: '0%',
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+    exit: (dir: number) => ({
+      y: dir === 1 ? '-100%' : '100%',
+      opacity: 0,
+      transition: { duration: 0.5 },
+    }),
+  };
+
   return (
     <motion.div
-      className='page-wrapper'
       custom={direction}
       variants={variants}
       initial='initial'
       animate='animate'
       exit='exit'
+      onAnimationComplete={() => setManualTrigger(false)} // reset
     >
       {children}
     </motion.div>
   );
-};
+}

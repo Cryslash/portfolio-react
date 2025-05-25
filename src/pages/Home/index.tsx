@@ -61,7 +61,10 @@ export function Home() {
             </a>
           </div>
           <a href='#' className={styles.btn}>
-            Contate-me
+            Contrate-me
+          </a>
+          <a href='#' className={`${styles.btn} ${styles.space}`}>
+            baixar currículo
           </a>
         </div>
       </section>
