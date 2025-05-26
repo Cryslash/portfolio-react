@@ -2,12 +2,12 @@ import styles from './styles.module.css';
 import { useLocation, useNavigate } from 'react-router';
 import { useScrollDirection } from '../../contexts/ScrollContext';
 
+export const orderedRoutes = ['/', '/skills', '/trabalhos', '/contato'];
+
 export function Menu() {
   const location = useLocation();
   const navigate = useNavigate();
   const { setDirection, setManualTrigger } = useScrollDirection();
-
-  const orderedRoutes = ['/', '/skills', '/trabalhos', '/contato'];
 
   const handleClick = (path: string) => {
     const currentIndex = orderedRoutes.indexOf(location.pathname);

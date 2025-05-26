@@ -1,0 +1,21 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.workTitle {
+  font-size: 3.2rem;
+  padding-top: 10rem;
+  font-weight: 300;
+}
+
+.workRow {
+  width: 90%;
+  max-width: 1080px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 20px;
+}

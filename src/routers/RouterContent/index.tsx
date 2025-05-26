@@ -7,11 +7,12 @@ import { AnimatePresence } from 'framer-motion';
 import { PageWrapper } from '../../components/PageWrapper';
 import { MainTemplate } from '../../templates/MainTemplate';
 import { Menu } from '../../components/Menu';
-import { useScrollDirection } from '../../contexts/ScrollContext';
+import { orderedRoutes } from '../../components/Menu';
+import { Works } from '../../pages/Works';
 
 export function RouterContent() {
   const location = useLocation();
-  const { direction } = useScrollDirection();
+  const path = orderedRoutes;
 
   return (
     <>
@@ -20,21 +21,31 @@ export function RouterContent() {
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route
-            path='/'
+            path={path[0]} // /
             element={
               <MainTemplate>
-                <PageWrapper direction={direction}>
+                <PageWrapper>
                   <Home />
                 </PageWrapper>
               </MainTemplate>
             }
           />
           <Route
-            path='/skills'
+            path={path[1]} // /skills
             element={
               <MainTemplate>
-                <PageWrapper direction={direction}>
+                <PageWrapper>
                   <Skills />
+                </PageWrapper>
+              </MainTemplate>
+            }
+          />
+          <Route
+            path={path[2]} // /trabalhos
+            element={
+              <MainTemplate>
+                <PageWrapper>
+                  <Works />
                 </PageWrapper>
               </MainTemplate>
             }
@@ -42,7 +53,7 @@ export function RouterContent() {
           <Route
             path='*'
             element={
-              <PageWrapper direction={direction}>
+              <PageWrapper>
                 <NotFound />
               </PageWrapper>
             }

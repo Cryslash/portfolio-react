@@ -21,9 +21,9 @@ export function Home() {
   );
 
   const jobs = [
-    'Desenvolvedor Web',
-    'Programador FullStack',
-    'Desenvolvedor Desktop',
+    'Desenvolvedor web',
+    'Programador fullstack',
+    'Desenvolvedor desktop',
     'Criador de coisas legais',
   ];
 
@@ -64,7 +64,7 @@ export function Home() {
             Contrate-me
           </a>
           <a href='#' className={`${styles.btn} ${styles.space}`}>
-            baixar currículo
+            Baixar currículo
           </a>
         </div>
       </section>
