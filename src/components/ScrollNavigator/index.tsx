@@ -38,7 +38,7 @@ export default function ScrollNavigator() {
 
     window.addEventListener('wheel', handleWheel);
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [location.pathname, navigate]);
+  }, [location.pathname, navigate, setDirection]);
 
   return null;
 }
