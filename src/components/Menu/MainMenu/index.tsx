@@ -1,8 +1,7 @@
 import styles from './styles.module.css';
 import { useLocation, useNavigate } from 'react-router';
-import { useScrollDirection } from '../../contexts/ScrollContext';
-
-export const orderedRoutes = ['/', '/skills', '/trabalhos', '/contato'];
+import { useScrollDirection } from '../../../contexts/ScrollContext';
+import { orderedRoutes } from '../OrderedRoutes';
 
 export function Menu() {
   const location = useLocation();
@@ -24,7 +23,9 @@ export function Menu() {
 
   return (
     <header>
-      <a className={styles.logo}>CryTech</a>
+      <a onClick={() => handleClick(orderedRoutes[0])} className={styles.logo}>
+        CryTech
+      </a>
       <nav className={styles.menu}>
         <a
           onClick={() => handleClick(orderedRoutes[0])}
@@ -40,7 +41,7 @@ export function Menu() {
             location.pathname === orderedRoutes[1] ? styles.active : ''
           }
         >
-          Skills
+          Tecnologias
         </a>
         <a
           onClick={() => handleClick(orderedRoutes[2])}

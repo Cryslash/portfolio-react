@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { useScrollDirection } from '../../contexts/ScrollContext';
-
-const orderedRoutes = ['/', '/skills', '/trabalhos', '/contato'];
+import { orderedRoutes } from '../Menu/OrderedRoutes';
 
 export default function ScrollNavigator() {
   const location = useLocation();

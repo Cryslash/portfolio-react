@@ -47,25 +47,40 @@ export function Home() {
             quibusdam quaerat neque asperiores ea.
           </p>
           <div className={styles.socialIcons}>
-            <a href='#'>
+            <a
+              href='https://www.linkedin.com/in/crystofher-lins-15aa69248'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Linkedin />
             </a>
-            <a href='#'>
+            <a
+              href='https://github.com/Cryslash'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Github />
             </a>
             <a href='#'>
               <XIcon />
             </a>
-            <a href='#'>
+            <a
+              href='https://www.instagram.com/crystofher_lins/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Instagram />
             </a>
           </div>
-          <a href='#' className={styles.btn}>
+          <a href='/files/Crystofher_Lins.pdf' download className={styles.btn}>
+            Meu currículo
+          </a>
+          {/* <a
+            href='#'            
+            className={`${styles.btn} ${styles.space}`}
+          >
             Contrate-me
-          </a>
-          <a href='#' className={`${styles.btn} ${styles.space}`}>
-            Baixar currículo
-          </a>
+          </a> */}
         </div>
       </section>
     </MainTemplate>

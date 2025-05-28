@@ -6,37 +6,42 @@ import styles from './styles.module.css';
 export function Skills() {
   const techData = [
     [
-      { alt: 'React', title: 'React', src: '/images/icons/react.png' },
+      { alt: 'React', title: 'React', src: '/images/icons/react.svg' },
       {
         alt: 'TypeScript',
         title: 'TypeScript',
-        src: '/images/icons/typeScript.png',
+        src: '/images/icons/ts.svg',
       },
-      { alt: 'JavaScript', title: 'JavaScript', src: '/images/icons/js.png' },
-      { alt: 'Node', title: 'Node', src: '/images/icons/node.png' },
-      { alt: 'Rails', title: 'RubyOnRails', src: '/images/icons/rails.png' },
+      { alt: 'NextJs', title: 'NextJs', src: '/images/icons/nextjs.svg' },
+      { alt: 'JavaScript', title: 'JavaScript', src: '/images/icons/js.svg' },
+      { alt: 'NodeJs', title: 'NodeJs', src: '/images/icons/node.svg' },
     ],
     [
-      { alt: 'PHP', title: 'PHP', src: '/images/icons/php.png' },
+      { alt: 'Rails', title: 'RubyOnRails', src: '/images/icons/rails.svg' },
+      { alt: 'PHP', title: 'PHP', src: '/images/icons/php.svg' },
       {
         alt: 'CodeIgniter',
         title: 'CodeIgniter',
-        src: '/images/icons/codeIgniter.png',
+        src: '/images/icons/codeIgniter.svg',
       },
-      { alt: 'HTML5', title: 'HTML5', src: '/images/icons/html.png' },
-      { alt: 'CSS', title: 'CSS', src: '/images/icons/css.png' },
-      { alt: 'C#', title: 'C#', src: '/images/icons/cSharp.png' },
+      { alt: 'HTML5', title: 'HTML5', src: '/images/icons/html.svg' },
+      { alt: 'CSS', title: 'CSS', src: '/images/icons/css3.svg' },
     ],
     [
-      { alt: 'MongoDB', title: 'MongoDB', src: '/images/icons/mongo.png' },
-      { alt: 'MySQL', title: 'MySQL', src: '/images/icons/mySql.png' },
+      { alt: 'C#', title: 'C#', src: '/images/icons/cSharp.svg' },
+      { alt: 'Python', title: 'Python', src: '/images/icons/python.svg' },
+      { alt: 'MongoDB', title: 'MongoDB', src: '/images/icons/mongo.svg' },
+      { alt: 'MySQL', title: 'MySQL', src: '/images/icons/mySql.svg' },
       {
         alt: 'SQLServer',
         title: 'SQLServer',
-        src: '/images/icons/sqlServer.png',
+        src: '/images/icons/sqlServer.svg',
       },
-      { alt: 'Docker', title: 'Docker', src: '/images/icons/docker.png' },
-      { alt: 'Git', title: 'Git', src: '/images/icons/git.png' },
+    ],
+    [
+      { alt: 'WSL', title: 'WSL', src: '/images/icons/wsl.svg' },
+      { alt: 'Docker', title: 'Docker', src: '/images/icons/docker.svg' },
+      { alt: 'Git', title: 'Git', src: '/images/icons/git.svg' },
     ],
   ];
 

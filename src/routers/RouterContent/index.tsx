@@ -6,8 +6,8 @@ import ScrollNavigator from '../../components/ScrollNavigator';
 import { AnimatePresence } from 'framer-motion';
 import { PageWrapper } from '../../components/PageWrapper';
 import { MainTemplate } from '../../templates/MainTemplate';
-import { Menu } from '../../components/Menu';
-import { orderedRoutes } from '../../components/Menu';
+import { Menu } from '../../components/Menu/MainMenu';
+import { orderedRoutes } from '../../components/Menu/OrderedRoutes';
 import { Works } from '../../pages/Works';
 
 export function RouterContent() {
@@ -31,7 +31,7 @@ export function RouterContent() {
             }
           />
           <Route
-            path={path[1]} // /skills
+            path={path[1]} // /tecnologias
             element={
               <MainTemplate>
                 <PageWrapper>
