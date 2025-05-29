@@ -1,0 +1,23 @@
+.langLogo {
+  max-width: 112px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+img {
+  transition: 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.gridResponsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  margin: 30px auto;
+  gap: 5rem;
+  width: 80%;
+}
