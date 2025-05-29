@@ -1,21 +1,21 @@
-.works {
+.projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.workTitle {
+.projectTitle {
   font-size: 3.2rem;
-  padding-top: 10rem;
   font-weight: 300;
 }
 
-.workRow {
+.projectRow {
   width: 90%;
   max-width: 1080px;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr); /* 346px */
   grid-gap: 20px;
 }

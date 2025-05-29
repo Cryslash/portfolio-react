@@ -1,1 +1,1 @@
-export const orderedRoutes = ['/', '/tecnologias', '/trabalhos', '/contato'];
+export const orderedRoutes = ['/', '/tecnologias', '/projetos', '/contato'];

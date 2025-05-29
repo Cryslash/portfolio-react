@@ -8,7 +8,7 @@ import { PageWrapper } from '../../components/PageWrapper';
 import { MainTemplate } from '../../templates/MainTemplate';
 import { Menu } from '../../components/Menu/MainMenu';
 import { orderedRoutes } from '../../components/Menu/OrderedRoutes';
-import { Works } from '../../pages/Works';
+import { Projects } from '../../pages/Projects';
 
 export function RouterContent() {
   const location = useLocation();
@@ -45,7 +45,7 @@ export function RouterContent() {
             element={
               <MainTemplate>
                 <PageWrapper>
-                  <Works />
+                  <Projects />
                 </PageWrapper>
               </MainTemplate>
             }

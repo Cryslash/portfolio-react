@@ -1,4 +1,4 @@
-.work {
+.project {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,17 +10,17 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-.work:hover {
+.project:hover {
   box-shadow: 0 0 25px #b74b4b;
 }
-.workImg {
+.projectImg {
   width: 95%;
   height: 66%;
   margin-top: 7px;
   border-radius: 3px;
   /* border: 1px solid #dddd; */
 }
-.workDesc {
+.projectDesc {
   width: 85%;
   height: 20%;
   margin-top: 10px;

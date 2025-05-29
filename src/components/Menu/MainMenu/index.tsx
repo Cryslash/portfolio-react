@@ -49,7 +49,7 @@ export function Menu() {
             location.pathname === orderedRoutes[2] ? styles.active : ''
           }
         >
-          Trabalhos
+          Projetos
         </a>
         <a
           onClick={() => handleClick(orderedRoutes[3])}

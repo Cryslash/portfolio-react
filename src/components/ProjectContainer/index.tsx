@@ -1,19 +1,19 @@
 import styles from './styles.module.css';
 
-type WorksProps = {
+type ProjectsProps = {
   desc: string;
   cat: string;
   src: string;
 };
 
-export const Work: React.FC<WorksProps> = ({ desc, cat, src }) => {
+export const Project: React.FC<ProjectsProps> = ({ desc, cat, src }) => {
   return (
-    <div className={styles.work}>
+    <div className={styles.project}>
       <div
-        className={styles.workImg}
+        className={styles.projectImg}
         style={{ background: `url(${src}) no-repeat`, backgroundSize: 'cover' }}
       ></div>
-      <div className={styles.workDesc}>
+      <div className={styles.projectDesc}>
         <p className={styles.desc}>{desc}</p>
         <p className={styles.cat}>{cat}</p>
       </div>
