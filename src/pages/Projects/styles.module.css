@@ -8,14 +8,35 @@
 .projectTitle {
   font-size: 3.2rem;
   font-weight: 300;
+  text-align: center;
 }
 
 .projectRow {
-  width: 90%;
+  width: 100%;
   max-width: 1080px;
   margin: 30px auto;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); */
   grid-template-columns: repeat(3, 1fr); /* 346px */
   grid-gap: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .projectRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .projectRow {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projectTitle {
+    font-size: 2.4rem;
+  }
+
+  body {
+    overflow-y: auto;
+  }
 }

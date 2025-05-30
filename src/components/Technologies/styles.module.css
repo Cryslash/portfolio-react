@@ -21,3 +21,15 @@ img:hover {
   gap: 5rem;
   width: 80%;
 }
+
+@media only screen and (max-width: 640px) {
+  .gridResponsive {
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .langLogo {
+    max-width: 90px;
+  }
+}
