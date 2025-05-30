@@ -73,7 +73,7 @@ export function Home() {
             </a>
           </div>
           <a href='/files/Crystofher_Lins.pdf' download className={styles.btn}>
-            Meu currículo
+            Download CV
           </a>
           {/* <a
             href='#'            
