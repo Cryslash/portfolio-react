@@ -9,6 +9,7 @@ import { MainTemplate } from '../../templates/MainTemplate';
 import { Menu } from '../../components/Menu/MainMenu';
 import { orderedRoutes } from '../../components/Menu/OrderedRoutes';
 import { Projects } from '../../pages/Projects';
+import { Contact } from '../../pages/Contact';
 
 export function RouterContent() {
   const location = useLocation();
@@ -41,11 +42,21 @@ export function RouterContent() {
             }
           />
           <Route
-            path={path[2]} // /trabalhos
+            path={path[2]} // /projetos
             element={
               <MainTemplate>
                 <PageWrapper>
                   <Projects />
+                </PageWrapper>
+              </MainTemplate>
+            }
+          />
+          <Route
+            path={path[3]} // /contato
+            element={
+              <MainTemplate>
+                <PageWrapper>
+                  <Contact />
                 </PageWrapper>
               </MainTemplate>
             }

@@ -1,0 +1,69 @@
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.contentFluid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4rem;
+  /* gap: 8rem;  
+  width: 80%; */
+  margin: 30px auto;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contactBox:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 64px;
+  height: auto;
+  color: #b74b4b;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.desc {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentFluid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .contentFluid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
