@@ -5,8 +5,6 @@
 .cursor::after {
   content: '';
   position: absolute;
-  /* background-color: black; */
-  /* width: calc(100% + 8px); */
   height: 100%;
   max-height: 55px;
   border-left: 3px solid black;
@@ -17,5 +15,11 @@
 @keyframes cursor {
   to {
     border-left: 3px solid #b74b4b;
+  }
+}
+
+@media (max-width: 640px) {
+  .cursor::after {
+    max-height: 30px;
   }
 }

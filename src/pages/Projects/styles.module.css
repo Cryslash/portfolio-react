@@ -27,6 +27,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .projectRow {
     grid-template-columns: repeat(1, 1fr);
@@ -34,9 +40,5 @@
 
   .projectTitle {
     font-size: 2.4rem;
-  }
-
-  body {
-    overflow-y: auto;
   }
 }

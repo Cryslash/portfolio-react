@@ -96,3 +96,22 @@ span {
   font-weight: 600;
   min-width: 280px;
 }
+
+@media (max-width: 640px) {
+  .home {
+    display: flex;
+    gap: 0;
+  }
+
+  .home .homeContent h1 {
+    font-size: 3.3rem;
+  }
+
+  .homeContent h3 {
+    font-size: 2.2rem;
+  }
+
+  .homeContent p {
+    font-size: 1.6rem;
+  }
+}
