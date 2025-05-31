@@ -10,10 +10,15 @@ import { Menu } from '../../components/Menu/MainMenu';
 import { orderedRoutes } from '../../components/Menu/OrderedRoutes';
 import { Projects } from '../../pages/Projects';
 import { Contact } from '../../pages/Contact';
+import { useEffect } from 'react';
 
 export function RouterContent() {
   const location = useLocation();
   const path = orderedRoutes;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [location.pathname]);
 
   return (
     <>
