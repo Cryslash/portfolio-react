@@ -41,10 +41,11 @@ export function Home() {
             Eu sou um <TypingText words={jobs} />
           </h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-            labore dolores esse. Odit similique doloribus tenetur doloremque,
-            sunt commodi in ipsa repudiandae debitis deleniti blanditiis
-            quibusdam quaerat neque asperiores ea.
+            Comprometido em entregar soluções que fazem a diferença. Atuo em
+            projetos de software livre, colaboro com iniciativas sociais e
+            transformo ideias em ferramentas úteis. Acredito na tecnologia como
+            agente de mudança e na colaboração como motor para um mundo mais
+            justo e acessível.
           </p>
           <div className={styles.socialIcons}>
             <a
