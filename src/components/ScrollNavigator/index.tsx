@@ -95,7 +95,8 @@ export default function ScrollNavigator() {
       const scrollHeight = document.documentElement.scrollHeight;
 
       const atTop = scrollY === 0;
-      const atBottom = scrollY + innerHeight >= scrollHeight;
+      const tolerance = 20;
+      const atBottom = scrollY + innerHeight >= scrollHeight - tolerance;
 
       const currentIndex = orderedRoutes.indexOf(location.pathname);
       let nextIndex = currentIndex;
