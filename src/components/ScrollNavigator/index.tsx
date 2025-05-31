@@ -13,20 +13,30 @@ export default function ScrollNavigator() {
     const handleWheel = (event: WheelEvent) => {
       if (isScrolling.current) return;
 
-      isScrolling.current = true;
+      const scrollY = window.scrollY;
+      const innerHeight = window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      const atTop = scrollY === 0;
+      const atBottom = scrollY + innerHeight >= scrollHeight;
 
       const currentIndex = orderedRoutes.indexOf(location.pathname);
       let nextIndex = currentIndex;
 
-      if (event.deltaY > 0 && currentIndex < orderedRoutes.length - 1) {
+      if (
+        event.deltaY > 0 &&
+        atBottom &&
+        currentIndex < orderedRoutes.length - 1
+      ) {
         nextIndex = currentIndex + 1;
         setDirection(1);
-      } else if (event.deltaY < 0 && currentIndex > 0) {
+      } else if (event.deltaY < 0 && atTop && currentIndex > 0) {
         nextIndex = currentIndex - 1;
         setDirection(-1);
       }
 
       if (nextIndex !== currentIndex) {
+        isScrolling.current = true;
         navigate(orderedRoutes[nextIndex]);
       }
 
