@@ -43,6 +43,7 @@
   cursor: pointer;
   transition: all 0.3s ease-out;
   z-index: 999;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
