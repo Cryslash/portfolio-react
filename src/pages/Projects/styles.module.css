@@ -16,7 +16,6 @@
   max-width: 1080px;
   margin: 30px auto;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); */
   grid-template-columns: repeat(3, 1fr); /* 346px */
   grid-gap: 20px;
 }
