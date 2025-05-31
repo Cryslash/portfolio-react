@@ -1,3 +1,5 @@
+import { AnimatedContent } from '../../components/AnimatedContent';
+import { AnimatedTitle } from '../../components/AnimatedTitle';
 import { Container } from '../../components/Container';
 import { Project } from '../../components/ProjectContainer';
 import styles from './styles.module.css';
@@ -6,10 +8,10 @@ export function Projects() {
   return (
     <Container>
       <div className={styles.projects}>
-        <h1 className={styles.projectTitle}>
+        <AnimatedTitle className={styles.projectTitle}>
           Alguns dos meus últimos trabalhos
-        </h1>
-        <div className={styles.projectRow}>
+        </AnimatedTitle>
+        <AnimatedContent className={styles.projectRow}>
           <Project
             src='./images/projects/ecommerce.jpg'
             desc='e-commerce'
@@ -30,7 +32,7 @@ export function Projects() {
             desc='WoW Classic - Guia'
             cat='Web Site'
           />
-        </div>
+        </AnimatedContent>
       </div>
     </Container>
   );

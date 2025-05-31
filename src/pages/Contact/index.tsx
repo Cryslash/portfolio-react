@@ -1,12 +1,15 @@
 import { Instagram, Linkedin, Mail, MapPin, PhoneCall } from 'lucide-react';
 import { Container } from '../../components/Container';
 import styles from './styles.module.css';
+import { AnimatedTitle } from '../../components/AnimatedTitle';
+import { AnimatedContent } from '../../components/AnimatedContent';
 
 export function Contact() {
   return (
     <Container>
-      <h1 className={styles.title}> Contatos</h1>
-      <div className={styles.contentFluid}>
+      <AnimatedTitle className={styles.title}>Contatos</AnimatedTitle>
+
+      <AnimatedContent className={styles.contentFluid}>
         <a className={styles.contactBox}>
           <PhoneCall className={styles.icon} />
           <p className={styles.desc}>telefone</p>
@@ -47,7 +50,7 @@ export function Contact() {
           <Instagram className={styles.icon} />
           <p className={styles.desc}>instagram</p>
         </a>
-      </div>
+      </AnimatedContent>
     </Container>
   );
 }

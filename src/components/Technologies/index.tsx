@@ -1,3 +1,4 @@
+import { AnimatedContent } from '../AnimatedContent';
 import styles from './styles.module.css';
 
 type Technology = {
@@ -12,7 +13,7 @@ type TechnologyProps = {
 
 export const Technology: React.FC<TechnologyProps> = ({ data }) => {
   return (
-    <div className={styles.gridResponsive}>
+    <AnimatedContent className={styles.gridResponsive}>
       {data.map((tech, techIndex) => (
         <img
           key={techIndex}
@@ -22,6 +23,6 @@ export const Technology: React.FC<TechnologyProps> = ({ data }) => {
           className={styles.langLogo}
         />
       ))}
-    </div>
+    </AnimatedContent>
   );
 };

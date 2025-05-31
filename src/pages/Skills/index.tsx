@@ -1,3 +1,4 @@
+import { AnimatedTitle } from '../../components/AnimatedTitle';
 import { Container } from '../../components/Container';
 import { Technology } from '../../components/Technologies';
 import { MainTemplate } from '../../templates/MainTemplate';
@@ -45,10 +46,9 @@ export function Skills() {
     <MainTemplate>
       <Container>
         <div className={styles.skills}>
-          <h1 className={styles.langTitle}>
+          <AnimatedTitle className={styles.langTitle}>
             Algumas das tecnologias que utilizo
-          </h1>
-
+          </AnimatedTitle>
           {/* <TechTable data={techData} /> */}
           <Technology data={techData} />
         </div>
