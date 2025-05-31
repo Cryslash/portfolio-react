@@ -17,7 +17,7 @@ export function RouterContent() {
   const path = orderedRoutes;
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
   return (
