@@ -102,6 +102,7 @@
 
 .resize a {
   visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .actived {
