@@ -12,8 +12,9 @@ export function Skills() {
       title: 'TypeScript',
       src: '/images/icons/ts.svg',
     },
-    { alt: 'NextJs', title: 'NextJs', src: '/images/icons/nextjs.svg' },
     { alt: 'JavaScript', title: 'JavaScript', src: '/images/icons/js.svg' },
+    { alt: 'Vite', title: 'Vite', src: '/images/icons/vite.svg' },
+    { alt: 'NextJs', title: 'NextJs', src: '/images/icons/nextjs.svg' },
     { alt: 'NodeJs', title: 'NodeJs', src: '/images/icons/node.svg' },
 
     { alt: 'Rails', title: 'RubyOnRails', src: '/images/icons/rails.svg' },
@@ -22,6 +23,16 @@ export function Skills() {
       alt: 'CodeIgniter',
       title: 'CodeIgniter',
       src: '/images/icons/codeIgniter.svg',
+    },
+    {
+      alt: 'TailwindCSS',
+      title: 'TailwindCSS',
+      src: '/images/icons/tailwindCss.svg',
+    },
+    {
+      alt: 'Bootstrap',
+      title: 'Bootstrap',
+      src: '/images/icons/bootstrap.svg',
     },
     { alt: 'HTML5', title: 'HTML5', src: '/images/icons/html.svg' },
     { alt: 'CSS', title: 'CSS', src: '/images/icons/css3.svg' },
@@ -49,7 +60,6 @@ export function Skills() {
           <AnimatedTitle className={styles.langTitle}>
             Algumas das tecnologias que utilizo
           </AnimatedTitle>
-          {/* <TechTable data={techData} /> */}
           <Technology data={techData} />
         </div>
       </Container>
