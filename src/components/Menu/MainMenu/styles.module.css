@@ -44,6 +44,7 @@
   transition: all 0.3s ease-out;
   z-index: 999;
   -webkit-tap-highlight-color: transparent;
+  display: none;
 }
 
 .icon {
@@ -64,9 +65,8 @@
   position: relative;
 }
 
-.toggle {
-  display: none;
-}
+/* .toggle {
+} */
 
 .on .one {
   transform: rotate(45deg);
@@ -128,7 +128,7 @@
     position: absolute;
     width: 48px;
     height: 48px;
-    top: 7vh;
+    top: 3vh;
     right: 5vw;
     border-radius: 12px;
     background-color: #000;

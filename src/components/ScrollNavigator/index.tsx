@@ -41,7 +41,7 @@ export default function ScrollNavigator() {
       const scrollHeight = document.documentElement.scrollHeight;
 
       // const atTop = scrollY === 0;
-      const tolerance = 20;
+      const tolerance = 30;
       const atTop = scrollY <= tolerance;
       const atBottom = scrollY + innerHeight >= scrollHeight - tolerance;
 
