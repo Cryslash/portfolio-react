@@ -38,11 +38,11 @@ export function Projects() {
             src='./images/projects/ecommerce.jpg'
             title='E-Commerce'
             cat='Desenvolvimento FullStack'
-            desc="Site desenvolvido em PHP com a framework codeigniter, um ecommerce completo, com controle
-             de estoque, pedidos, vendas,integração com api's de pagamentos como mercado pago e paypal, e api
+            desc="Site desenvolvido em PHP com o framework codeigniter, um ecommerce completo, com controle
+             de estoque, pedidos, vendas, integração com api's de pagamentos como mercado pago e paypal, e api
               dos correios para cálculo de frete."
             url=''
-            technologies={['php', 'codeigniter', 'js', 'mysql']}
+            technologies={['php', 'codeigniter', 'js', 'ts', 'rails', 'mysql']}
             date='21/10/2018'
           />
           <Project

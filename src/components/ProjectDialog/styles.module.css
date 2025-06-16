@@ -115,7 +115,7 @@
 @media (max-width: 640px) {
   .content {
     max-width: 90%;
-    padding: 1.6rem;
+    padding: 3.2rem 1.8rem;
   }
 
   .title {
