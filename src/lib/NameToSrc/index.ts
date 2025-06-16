@@ -1,4 +1,4 @@
-type TechnologyName =
+export type TechnologyName =
   | 'php'
   | 'codeigniter'
   | 'csharp'

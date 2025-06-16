@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './styles.module.css';
 import { ProjectDialog } from '../ProjectDialog';
+import type { TechnologyName } from '../../lib/NameToSrc';
 
 type ProjectsProps = {
   title: string;
@@ -8,7 +9,7 @@ type ProjectsProps = {
   src: string;
   desc: string;
   url: string;
-  technologies: string[];
+  technologies: TechnologyName[];
   date: string;
 };
 

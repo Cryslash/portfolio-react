@@ -1,13 +1,13 @@
 import { XIcon } from 'lucide-react';
 import styles from './styles.module.css';
-import { ConvertNameToSrc } from '../../lib/NameToSrc';
+import { ConvertNameToSrc, type TechnologyName } from '../../lib/NameToSrc';
 
 type ProjectDialogProps = {
   title: string;
   desc: string;
   url?: string;
   src: string;
-  technologies: [];
+  technologies: TechnologyName[];
   date: string;
   onClose: () => void;
 };
@@ -15,7 +15,6 @@ type ProjectDialogProps = {
 export function ProjectDialog({
   title,
   desc,
-  url = '',
   src,
   technologies,
   date,
@@ -49,11 +48,13 @@ export function ProjectDialog({
                 technologies.length >= 5 ? styles.spaceAround : ''
               }`}
             >
-              {technologies.map(tech => (
+              {technologies.map((tech, index) => (
                 <img
+                  key={index}
                   className={styles.imgSmall}
                   src={ConvertNameToSrc(tech)}
                   title={tech}
+                  alt={tech}
                 />
               ))}
             </div>
