@@ -26,8 +26,7 @@ export default function ScrollNavigator() {
       const touchEndY = event.changedTouches[0].clientY;
       const deltaY = touchStartY.current - touchEndY;
 
-      if (Math.abs(deltaY) > 50) {
-        //80
+      if (Math.abs(deltaY) > 80) {
         handleScroll(deltaY);
       }
 
@@ -42,7 +41,7 @@ export default function ScrollNavigator() {
       const scrollHeight = document.documentElement.scrollHeight;
 
       const atTop = scrollY === 0;
-      const tolerance = 0; //15
+      const tolerance = 30;
       const atBottom = scrollY + innerHeight >= scrollHeight - tolerance;
 
       const currentIndex = orderedRoutes.indexOf(location.pathname);
