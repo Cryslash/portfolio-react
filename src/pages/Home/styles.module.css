@@ -27,6 +27,7 @@ span {
 }
 
 .homeImg {
+  -webkit-tap-highlight-color: transparent;
   border-radius: 50%;
 }
 

@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   /* overflow-anchor: none; */
 }
 
@@ -10,15 +11,16 @@
   font-size: 3.2rem;
   font-weight: 300;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .projectRow {
   width: 100%;
   max-width: 1080px;
-  margin: 30px auto;
+  /* margin: 30px auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 346px */
-  grid-gap: 20px;
+  grid-gap: 4rem;
 }
 
 @media only screen and (max-width: 1024px) {
