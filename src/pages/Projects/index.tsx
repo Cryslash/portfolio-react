@@ -42,7 +42,7 @@ export function Projects() {
              de estoque, pedidos, vendas, integração com api's de pagamentos como mercado pago e paypal, e api
               dos correios para cálculo de frete."
             url=''
-            technologies={['php', 'codeigniter', 'js', 'ts', 'rails', 'mysql']}
+            technologies={['php', 'codeigniter', 'js', 'mysql']}
             date='21/10/2018'
           />
           <Project
