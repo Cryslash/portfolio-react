@@ -31,7 +31,7 @@ export function Home() {
     <MainTemplate>
       <section className={styles.home}>
         <div className={styles.homeImg}>
-          {/* <img src='/images/main.jpg' alt='' /> */}
+          <img src='/images/crys.png' alt='' />
         </div>
         <div className={styles.homeContent}>
           <h1>

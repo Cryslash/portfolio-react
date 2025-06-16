@@ -99,12 +99,7 @@ span {
   min-width: 280px;
 }
 
-@media (max-width: 640px) {
-  .home {
-    display: flex;
-    gap: 0;
-  }
-
+@media (max-width: 1024px) {
   .home .homeContent h1 {
     font-size: 3.3rem;
   }
@@ -115,5 +110,24 @@ span {
 
   .homeContent p {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .homeImg {
+    align-self: self-start;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .homeImg {
+    align-self: center;
   }
 }
