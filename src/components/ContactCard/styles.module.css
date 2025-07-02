@@ -1,0 +1,29 @@
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-tap-highlight-color: transparent;
+  /* margin-bottom: 4rem; */
+}
+
+.contactBox:hover {
+  transform: scale(1.1);
+}
+
+.desc {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
