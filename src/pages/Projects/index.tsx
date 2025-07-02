@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 export function Projects() {
   return (
-    //Array com os dados !!
+    //TODO: Data Array!!
 
     <Container>
       <div className={styles.projects}>
@@ -14,6 +14,16 @@ export function Projects() {
           Alguns dos meus últimos trabalhos
         </AnimatedTitle>
         <AnimatedContent className={styles.projectRow}>
+          <Project
+            src='./images/projects/blog.png'
+            title='Blog'
+            cat='Web Site'
+            desc='Uma plataforma completa para publicação de notícias, com controle de acesso, gerenciamento de 
+            posts, suporte a múltiplos autores e administração de usuários.'
+            url=''
+            technologies={['ts', 'react', 'next']}
+            date='01/07/2025'
+          />
           <Project
             src='./images/projects/pdv.jpg'
             title='Sistema Pdv'
