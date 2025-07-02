@@ -3,53 +3,45 @@ import { Container } from '../../components/Container';
 import styles from './styles.module.css';
 import { AnimatedTitle } from '../../components/AnimatedTitle';
 import { AnimatedContent } from '../../components/AnimatedContent';
+import { ContactCard } from '../../components/ContactCard';
 
 export function Contact() {
+  //TODO: Data Array !!
+
   return (
     <Container>
       <AnimatedTitle className={styles.title}>Contatos</AnimatedTitle>
 
       <AnimatedContent className={styles.contentFluid}>
-        <a className={styles.contactBox}>
+        <ContactCard desc='telefone'>
           <PhoneCall className={styles.icon} />
-          <p className={styles.desc}>telefone</p>
-        </a>
+        </ContactCard>
 
-        <a
-          className={styles.contactBox}
+        <ContactCard
+          desc='email'
+          info='crystofher_lins@outlook.com'
           href='mailto:crystofher_lins@outlook.com'
-          style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <Mail className={styles.icon} />
-          <p className={styles.desc}>email</p>
-          <p className={styles.info}>crystofher_lins@outlook.com</p>
-        </a>
+        </ContactCard>
 
-        <a className={styles.contactBox}>
+        <ContactCard desc='localização' info='Brasil - Ceará'>
           <MapPin className={styles.icon} />
-          <p className={styles.desc}>localização</p>
-          <p className={styles.info}>Brasil - Ceará</p>
-        </a>
+        </ContactCard>
 
-        <a
-          className={styles.contactBox}
+        <ContactCard
+          desc='linkedin'
           href='https://www.linkedin.com/in/crystofher-lins-15aa69248'
-          target='_blank'
-          rel='noopener noreferrer'
         >
           <Linkedin className={styles.icon} />
-          <p className={styles.desc}>linkedin</p>
-        </a>
+        </ContactCard>
 
-        <a
-          className={styles.contactBox}
+        <ContactCard
+          desc='instagram'
           href='https://www.instagram.com/crystofher_lins/'
-          target='_blank'
-          rel='noopener noreferrer'
         >
           <Instagram className={styles.icon} />
-          <p className={styles.desc}>instagram</p>
-        </a>
+        </ContactCard>
       </AnimatedContent>
     </Container>
   );
