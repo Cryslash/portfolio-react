@@ -1,25 +1,36 @@
 import type React from 'react';
 import styles from './styles.module.css';
+import { Contact } from '../../pages/Contact';
+import { AnimatedContent } from '../AnimatedContent';
 
-type ContactCardProps = {
+type Contact = {
   desc: string;
+  icon: React.ReactElement;
   info?: string;
   href?: string;
-  children: React.ReactNode;
-} & React.ComponentProps<'a'>;
+};
 
-export function ContactCard({ desc, info, href, children }: ContactCardProps) {
+type ContactCardProps = {
+  data: Contact[];
+};
+
+export const ContactCard: React.FC<ContactCardProps> = ({ data }) => {
   return (
-    <a
-      href={href}
-      className={styles.contactBox}
-      style={{ textDecoration: 'none', color: 'inherit' }}
-      target='_blank'
-      rel='noopener noreferrer'
-    >
-      {children}
-      <p className={styles.desc}>{desc}</p>
-      {info && <p className={styles.info}>{info}</p>}
-    </a>
+    <AnimatedContent className={styles.contentFluid}>
+      {data.map((contact, index) => (
+        <a
+          key={index}
+          href={contact.href}
+          className={styles.contactBox}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {contact.icon}
+          <p className={styles.desc}>{contact.desc}</p>
+          {contact.info && <p className={styles.info}>{contact.info}</p>}
+        </a>
+      ))}
+    </AnimatedContent>
   );
-}
+};

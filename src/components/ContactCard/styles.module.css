@@ -1,3 +1,9 @@
+.contentFluid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4rem;
+}
+
 .contactBox {
   display: flex;
   flex-direction: column;
@@ -6,7 +12,6 @@
   cursor: pointer;
   transition: all 0.5s ease;
   -webkit-tap-highlight-color: transparent;
-  /* margin-bottom: 4rem; */
 }
 
 .contactBox:hover {
@@ -26,4 +31,20 @@
   font-weight: 200;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentFluid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  body {
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .contentFluid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
