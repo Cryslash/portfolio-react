@@ -1,6 +1,6 @@
 import { AnimatedTitle } from '../../components/AnimatedTitle';
 import { Container } from '../../components/Container';
-import { Technology } from '../../components/Technologies';
+import { Technologies } from '../../components/Technologies';
 import { MainTemplate } from '../../templates/MainTemplate';
 import styles from './styles.module.css';
 
@@ -60,7 +60,7 @@ export function Skills() {
           <AnimatedTitle className={styles.langTitle}>
             Algumas das tecnologias que utilizo
           </AnimatedTitle>
-          <Technology data={techData} />
+          <Technologies data={techData} />
         </div>
       </Container>
     </MainTemplate>

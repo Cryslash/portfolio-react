@@ -11,7 +11,7 @@ type TechnologyProps = {
   data: Technology[];
 };
 
-export const Technology: React.FC<TechnologyProps> = ({ data }) => {
+export const Technologies: React.FC<TechnologyProps> = ({ data }) => {
   return (
     <AnimatedContent className={styles.gridResponsive}>
       {data.map((tech, techIndex) => (
