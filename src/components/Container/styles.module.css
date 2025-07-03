@@ -7,8 +7,6 @@
 
 .container {
   display: flex;
-  align-self: self-start;
-  justify-content: center;
   min-height: 100vh;
   margin-top: 3rem;
   padding-inline: 15rem;

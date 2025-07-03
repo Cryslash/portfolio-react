@@ -39,7 +39,7 @@ export const Project: React.FC<ProjectsProps> = ({
           }}
         ></div>
         <div className={styles.projectTitle}>
-          <p className={styles.title}>{title}</p>
+          <p className={styles.desc}>{title}</p>
           <p className={styles.cat}>{cat}</p>
         </div>
       </div>
