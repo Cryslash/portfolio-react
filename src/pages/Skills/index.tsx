@@ -41,6 +41,7 @@ export function Skills() {
     { alt: 'Python', title: 'Python', src: '/images/icons/python.svg' },
     { alt: 'Lua', title: 'Lua', src: '/images/icons/lua.svg' },
     { alt: 'MongoDB', title: 'MongoDB', src: '/images/icons/mongo.svg' },
+    { alt: 'Sqlite', title: 'Sqlite', src: '/images/icons/sqlite.svg' },
     { alt: 'MySQL', title: 'MySQL', src: '/images/icons/mySql.svg' },
 
     {

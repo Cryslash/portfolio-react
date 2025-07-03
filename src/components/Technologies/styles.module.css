@@ -14,7 +14,7 @@
 .gridResponsive {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
-  margin: 30px auto;
+  margin: 4rem auto;
   gap: 5rem;
   width: 80%;
 }

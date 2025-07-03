@@ -14,7 +14,8 @@ export type TechnologyName =
   | 'vite'
   | 'rails'
   | 'sqlserver'
-  | 'mysql';
+  | 'mysql'
+  | 'sqlite';
 
 const technologies: Record<TechnologyName, string> = {
   php: '/images/icons/php.svg',
@@ -33,6 +34,7 @@ const technologies: Record<TechnologyName, string> = {
   rails: '/images/icons/rails.svg',
   sqlserver: '/images/icons/sqlServer.svg',
   mysql: '/images/icons/mySql.svg',
+  sqlite: '/images/icons/sqlite.svg',
 };
 
 export function ConvertNameToSrc(name: TechnologyName): string {
