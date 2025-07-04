@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* overflow-anchor: none; */
 }
 
 .projectTitle {
@@ -17,7 +15,6 @@
 .projectRow {
   width: 100%;
   max-width: 1080px;
-  /* margin: 30px auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 346px */
   grid-gap: 4rem;

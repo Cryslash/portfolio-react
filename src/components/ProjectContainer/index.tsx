@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import { ProjectDialog } from '../ProjectDialog';
 import type { TechnologyName } from '../../lib/NameToSrc';
 
-type ProjectsProps = {
+type Projects = {
   title: string;
   cat: string;
   src: string;
@@ -13,45 +13,47 @@ type ProjectsProps = {
   date: string;
 };
 
-export const Project: React.FC<ProjectsProps> = ({
-  title,
-  cat,
-  src,
-  desc,
-  url,
-  technologies,
-  date,
-}) => {
-  const [showDialog, setShowDialog] = useState(false);
+type ProjectsProps = {
+  data: Projects[];
+};
 
-  function handleClick() {
-    setShowDialog(true);
+export const Project: React.FC<ProjectsProps> = ({ data }) => {
+  const [activeProject, setActiveProject] = useState<Projects | null>(null);
+
+  function handleClick(project: Projects) {
+    setActiveProject(project);
   }
 
   return (
     <>
-      <div onClick={handleClick} className={styles.project}>
+      {data.map((project, index) => (
         <div
-          className={styles.projectImg}
-          style={{
-            background: `url(${src}) no-repeat`,
-            backgroundSize: 'cover',
-          }}
-        ></div>
-        <div className={styles.projectTitle}>
-          <p className={styles.desc}>{title}</p>
-          <p className={styles.cat}>{cat}</p>
+          key={'div-' + index}
+          onClick={() => handleClick(project)}
+          className={styles.project}
+        >
+          <div
+            className={styles.projectImg}
+            style={{
+              background: `url(${project.src}) no-repeat`,
+              backgroundSize: 'cover',
+            }}
+          ></div>
+          <div className={styles.projectTitle}>
+            <p className={styles.desc}>{project.title}</p>
+            <p className={styles.cat}>{project.cat}</p>
+          </div>
         </div>
-      </div>
-      {showDialog && (
+      ))}
+      {activeProject && (
         <ProjectDialog
-          title={title}
-          desc={desc}
-          url={url}
-          src={src}
-          technologies={technologies}
-          date={date}
-          onClose={() => setShowDialog(false)}
+          title={activeProject.title}
+          desc={activeProject.desc}
+          url={activeProject.url}
+          src={activeProject.src}
+          technologies={activeProject.technologies}
+          date={activeProject.date}
+          onClose={() => setActiveProject(null)}
         />
       )}
     </>
